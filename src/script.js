@@ -8,27 +8,27 @@ window.addEventListener("scroll", function () {
     navbar.classList.add("navbar-transparent", "text-white");
   }
 });
-// const accordionHeaders = document.querySelectorAll(".accordion-header");
+const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-// accordionHeaders.forEach((accordionHeader) => {
-//   accordionHeader.addEventListener("click", (event) => {
-//     const icon = accordionHeader.querySelector(".icon");
-//     const accordionBody = accordionHeader.nextElementSibling;
+accordionHeaders.forEach((accordionHeader) => {
+  accordionHeader.addEventListener("click", (event) => {
+    const icon = accordionHeader.querySelector(".icon");
+    const accordionBody = accordionHeader.nextElementSibling;
 
-//     accordionHeader.classList.toggle("active");
-//     if (accordionHeader.classList.contains("active")) {
-//       accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-//       icon.classList.remove("rotate-0");
-//       icon.classList.add("rotate-180");
-//       icon.textContent = "-";
-//     } else {
-//       accordionBody.style.maxHeight = 0;
-//       icon.classList.remove("rotate-180");
-//       icon.classList.add("rotate-0");
-//       icon.textContent = "+";
-//     }
-//   });
-// });
+    accordionHeader.classList.toggle("active");
+    if (accordionHeader.classList.contains("active")) {
+      accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+      icon.classList.remove("rotate-0");
+      icon.classList.add("rotate-180");
+      icon.textContent = "-";
+    } else {
+      accordionBody.style.maxHeight = 0;
+      icon.classList.remove("rotate-180");
+      icon.classList.add("rotate-0");
+      icon.textContent = "+";
+    }
+  });
+});
 
 document.querySelectorAll(".accordion-btn").forEach((button) => {
   button.addEventListener("click", () => {
